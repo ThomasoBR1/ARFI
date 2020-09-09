@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "161970085292",
+    "firebase_url": "https://arfi-project.firebaseio.com",
+    "project_id": "arfi-project",
+    "storage_bucket": "arfi-project.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:161970085292:android:71ce46092cd71c9f216e09",
+        "android_client_info": {
+          "package_name": "com.project.arfi"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "161970085292-vfu049qcugh598jdtbuj995kk176slbl.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.project.arfi",
+            "certificate_hash": "3e56a8130fdeb2df3a097a1e2156dcb98fc94fa4"
+          }
+        },
+        {
+          "client_id": "161970085292-khajsq26r6bqq27of69iqeihrav1u20o.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBSV3drhj_fGaRvhq6kqA9ETvUWQWyhpWs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "161970085292-khajsq26r6bqq27of69iqeihrav1u20o.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
