@@ -11,12 +11,12 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
 
     // ignore: deprecated_member_use
-    Firestore.instance.collection('light').getDocuments()..then((value) {
+    //Firestore.instance.collection('light').getDocuments().then((value) {
       // ignore: deprecated_member_use
-      value.documents.forEach((element) { 
-        print(element.data());
-      });
-    });
+      //value.documents.forEach((element) { 
+       // print(element.data());
+      //});
+   // });
 
     return MaterialApp(
       title: 'Flutter Demo',
@@ -42,12 +42,12 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  int _counter = 20;
+  
 
   void _incrementCounter() {
     setState(() {
      
-      _counter--;
+      
     });
   }
 
@@ -67,10 +67,6 @@ class _MyHomePageState extends State<MyHomePage> {
           children: <Widget>[
             Text(
               'You have pushed the button this many times:',
-            ),
-            Text(
-              '$_counter',
-              style: Theme.of(context).textTheme.headline4,
             ),
           ],
         ),
