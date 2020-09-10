@@ -1,3 +1,4 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -8,6 +9,15 @@ class MyApp extends StatelessWidget {
   
   @override
   Widget build(BuildContext context) {
+
+    // ignore: deprecated_member_use
+    Firestore.instance.collection('light').getDocuments()..then((value) {
+      // ignore: deprecated_member_use
+      value.documents.forEach((element) { 
+        print(element.data());
+      });
+    });
+
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
