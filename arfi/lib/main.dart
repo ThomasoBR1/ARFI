@@ -1,22 +1,24 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
+
+  
   runApp(MyApp());
 }
 
+    var valState = FirebaseFirestore.instance.doc('Light2/doc2');
+   // var valorCam = valState.get().then((value) => {
+   // print(value.data['doc2'])});
 class MyApp extends StatelessWidget {
   
   @override
   Widget build(BuildContext context) {
 
-    // ignore: deprecated_member_use
-    //Firestore.instance.collection('light').getDocuments().then((value) {
-      // ignore: deprecated_member_use
-      //value.documents.forEach((element) { 
-       // print(element.data());
-      //});
-   // });
+    
 
     return MaterialApp(
       title: 'Flutter Demo',
@@ -53,7 +55,8 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   Widget build(BuildContext context) {
-    
+  
+
     return Scaffold(
       appBar: AppBar(
        
@@ -73,9 +76,10 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       floatingActionButton: RaisedButton(
         child: const Text('Ligar'),
-        onPressed: _incrementCounter,
-        //child: Icon(Icons.add),
-      ), // This trailing comma makes auto-formatting nicer for build methods.
+        onPressed:(){
+       
+        }
+    ), 
     );
   }
 }
