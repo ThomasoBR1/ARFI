@@ -53,7 +53,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   FirebaseFirestore.instance
                       .collection('Light')
                       .doc('doc')
-                      .update({'turnOff': 'false'});
+                      .update({'turnOff' : true});
                 }),
           ],
         ),
