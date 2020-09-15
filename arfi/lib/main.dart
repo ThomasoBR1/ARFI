@@ -10,9 +10,11 @@ void main() async {
   runApp(MyApp());
 }
 
-    var valState = FirebaseFirestore.instance.doc('Light2/doc2');
-   // var valorCam = valState.get().then((value) => {
-   // print(value.data['doc2'])});
+  var valCamp = FirebaseFirestore.instance.collection('Light').doc('doc');
+  //var estado = valCamp.get().then((value) => {print(value.data['turnOff'])});
+ 
+
+
 class MyApp extends StatelessWidget {
   
   @override
@@ -21,14 +23,13 @@ class MyApp extends StatelessWidget {
     
 
     return MaterialApp(
-      title: 'Flutter Demo',
+      debugShowCheckedModeBanner: false,
+      title: 'A.R.F.I.',
       theme: ThemeData(
-       
-        primarySwatch: Colors.blue,
-        
+        primarySwatch: Colors.blueGrey,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: MyHomePage(title: 'Flutter Demo Home Page'),
+      home: MyHomePage(title: 'A.R.F.I.'),
     );
   }
 }
@@ -46,17 +47,8 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   
 
-  void _incrementCounter() {
-    setState(() {
-     
-      
-    });
-  }
-
   @override
   Widget build(BuildContext context) {
-  
-
     return Scaffold(
       appBar: AppBar(
        
@@ -68,18 +60,16 @@ class _MyHomePageState extends State<MyHomePage> {
          
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            Text(
-              'You have pushed the button this many times:',
-            ),
+           RaisedButton(
+        child: const Text('Ligar'),
+        onPressed:(){
+            FirebaseFirestore.instance.collection('Light').doc('doc').update({'turnOff':'false'});
+        }
+    ), 
           ],
         ),
       ),
-      floatingActionButton: RaisedButton(
-        child: const Text('Ligar'),
-        onPressed:(){
-       
-        }
-    ), 
+      
     );
   }
 }
