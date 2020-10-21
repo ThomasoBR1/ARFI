@@ -1,4 +1,5 @@
-import 'package:cloud_firestore/cloud_firestore.dart';
+
+import 'package:firebase_database/firebase_database.dart';
 import 'package:flutter/material.dart';
 
 class LuzQuarto extends StatefulWidget {
@@ -7,6 +8,7 @@ class LuzQuarto extends StatefulWidget {
 }
 
 class _LuzQuartoState extends State<LuzQuarto> {
+  final DBRef = FirebaseDatabase.instance.reference();
   bool _switchValue = false;
   bool _switchValues = false;
 
@@ -33,10 +35,9 @@ class _LuzQuartoState extends State<LuzQuarto> {
               onChanged: (value) {
                 setState(() {
                   _switchValue = value;
-                  FirebaseFirestore.instance
-                      .collection('smart_home')
-                      .doc('light')
-                      .update({'living_room': _switchValue});
+                  DBRef.child("luz").update({
+                    'data':_switchValue
+                  });
                 });
               },
             ),
@@ -56,10 +57,9 @@ class _LuzQuartoState extends State<LuzQuarto> {
               onChanged: (value) {
                 setState(() {
                   _switchValues = value;
-                  FirebaseFirestore.instance
-                      .collection('smart_home')
-                      .doc('light')
-                      .update({'room': _switchValues});
+                 DBRef.child("luz_quarto").update({
+                    'data': _switchValues
+                  });
                 });
               },
             ),
