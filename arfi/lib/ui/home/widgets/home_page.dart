@@ -46,7 +46,7 @@ class _HomePageState extends State<HomePage>
                   currentIndex = i,
                   setState(() {})
                 },
-                items: <Icon>[Icon(Icons.lightbulb_outline), Icon(Icons.toys)],
+                items: <Icon>[Icon(Icons.lightbulb_outline)],
               ),
             ],
           ),
