@@ -23,7 +23,7 @@ class _LuzQuartoState extends State<LuzQuarto> {
             Padding(
               padding: const EdgeInsets.only(top: 32, left: 16),
               child: Text(
-                'Luz 1',
+                'Luz do Quarto',
                 style: TextStyle(
                   fontWeight: FontWeight.bold,
                   fontSize: 20,
@@ -43,7 +43,7 @@ class _LuzQuartoState extends State<LuzQuarto> {
             Padding(
               padding: EdgeInsets.only(top: 2, left: 16),
               child: Text(
-                'Luz 2',
+                'Luz da Sala',
                 style: TextStyle(
                   fontWeight: FontWeight.bold,
                   fontSize: 20,
@@ -63,7 +63,7 @@ class _LuzQuartoState extends State<LuzQuarto> {
             Padding(
               padding: EdgeInsets.only(top: 2, left: 16),
               child: Text(
-                'Luz 3',
+                'Luz da Cozinha',
                 style: TextStyle(
                   fontWeight: FontWeight.bold,
                   fontSize: 20,
@@ -83,7 +83,7 @@ class _LuzQuartoState extends State<LuzQuarto> {
             Padding(
               padding: EdgeInsets.only(top: 2, left: 16),
               child: Text(
-                'Luz 4',
+                'Luz do Banheiro',
                 style: TextStyle(
                   fontWeight: FontWeight.bold,
                   fontSize: 20,
@@ -103,7 +103,7 @@ class _LuzQuartoState extends State<LuzQuarto> {
             Padding(
               padding: EdgeInsets.only(top: 2, left: 16),
               child: Text(
-                'Luz 5',
+                'Luz da Área de fora',
                 style: TextStyle(
                   fontWeight: FontWeight.bold,
                   fontSize: 20,
